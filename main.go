@@ -4,7 +4,6 @@ import (
 	"context"
 	"fmt"
 	"log"
-	"os"
 	"time"
 
 	"github.com/minio/minio-go/v7"
@@ -37,11 +36,11 @@ func main() {
 
 	// err = minioClient.FGetObject(context.Background(), "aas", "bleachbit_4.6.0-0_all_ubuntu2204.deb", "downloads.deb", minio.GetObjectOptions{})
 
-	file, err := os.Open("./cookies.txt")
-	defer file.Close()
+	// file, err := os.Open("./cookies.txt")
+	// defer file.Close()
 
-	fileStat, err := file.Stat()
-	minioClient.PutObject(context.Background(), "aas", "test-obj.txt", file, fileStat.Size(), minio.PutObjectOptions{ContentType: "application/octet-stream"})
+	// fileStat, err := file.Stat()
+	// minioClient.PutObject(context.Background(), "aas", "test-obj.txt", file, fileStat.Size(), minio.PutObjectOptions{ContentType: "application/octet-stream"})
 
 	// reqParams := make(url.Values)
 	// reqParams.Set("response-content-disposition", "attachment; filename=\""+"20240521_08.sql"+"\"")
