@@ -67,7 +67,7 @@ func main() {
 		}
 
 		// Print the presigned URL
-		fmt.Printf("Presigned URL for object %s: %s\n", object.Key, presignedURL)
+		fmt.Printf("File Name: %s\nDownload Link: %s\n\n\n", object.Key, presignedURL)
 	}
 
 }
